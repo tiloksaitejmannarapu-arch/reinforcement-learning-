@@ -1,0 +1,40 @@
+#-----------------------------
+# Grid World Path Visualization
+#-----------------------------
+
+grid_size <- 4
+
+# Agent path (Row, Column)
+x <- c(1,1,2,3,4,4,4)   # Rows
+y <- c(1,2,2,2,2,3,4)   # Columns
+
+plot(1:grid_size,
+     1:grid_size,
+     type = "n",
+     xlim = c(1, grid_size),
+     ylim = c(grid_size, 1),
+     xlab = "Column",
+     ylab = "Row",
+     main = "Agent Path in Grid World",
+     xaxt = "n",
+     yaxt = "n",
+     asp = 1)
+
+# Draw grid
+abline(v = 1:grid_size, col = "gray", lty = 2)
+abline(h = 1:grid_size, col = "gray", lty = 2)
+
+# Axis labels
+axis(1, at = 1:grid_size)
+axis(2, at = 1:grid_size, las = 1)
+
+# Mark Start and Goal
+text(y[1], x[1], "S", col = "blue", cex = 2, font = 2)
+text(grid_size, grid_size, "G", col = "red", cex = 2, font = 2)
+
+# Draw path
+lines(y, x, col = "darkgreen", lwd = 3)
+points(y, x, pch = 19, col = "black", cex = 1.5)
+
+# Number each step
+text(y, x, labels = 0:(length(x)-1), pos = 3, cex = 0.8, col = "purple")
