@@ -1,0 +1,7 @@
+Feature,Mean,Standard Deviation,Minimum,Maximum
+Stability,71.89,13.81,42.83,103.0
+Model,78.57,14.52,37.92,125.25
+Efficiency,75.47,15.99,32.82,105.88
+Accuracy,75.5,16.28,31.52,114.12
+Energy_Consumption,75.56,14.28,44.84,108.43
+Maintenance_Cost,69.98,14.8,35.47,95.56
